@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Supplier.Scontroller">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="396.0" prefWidth="803.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Details">
+               <content>
+                  <AnchorPane prefHeight="451.0" prefWidth="600.0">
+                     <children>
+                        <GridPane layoutX="87.0" layoutY="29.0" prefHeight="118.0" prefWidth="457.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="220.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="58.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="supplier_name" labelFloat="true" promptText="Supplier Name" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="phone" labelFloat="true" promptText="Mobile Number" GridPane.rowIndex="4" />
+                              <Label text="Address" GridPane.rowIndex="5" />
+                              <Label text="*" textFill="#e80808" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="*" textFill="#e80808" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="87.0" layoutY="169.0" prefHeight="94.0" prefWidth="376.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="149.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="State" labelFloat="true" prefHeight="26.0" prefWidth="173.0" promptText="State" />
+                              <JFXTextField fx:id="City" labelFloat="true" promptText="City" GridPane.columnIndex="2" />
+                              <JFXTextField fx:id="house" labelFloat="true" promptText="house" GridPane.rowIndex="2" />
+                              <JFXTextField fx:id="Pin" labelFloat="true" promptText="Pincode" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <JFXButton layoutX="131.0" layoutY="301.0" onAction="#getSupplierinfo" text="Save" />
+                        <JFXButton layoutX="237.0" layoutY="301.0" text="Cancel" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Supplier Details">
+               <content>
+                  <AnchorPane>
+                  <children>
+                     <VBox layoutY="30.0" prefHeight="515.0" prefWidth="759.0" spacing="10.0" AnchorPane.bottomAnchor="-178.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                        <children>
+                           <Label>
+                              <font>
+                                 <Font name="System Bold Italic" size="18.0" />
+                              </font>
+                           </Label>
+                           <TableView fx:id="tableView" editable="true" prefHeight="397.0" prefWidth="790.0">
+                              <columns>
+                                 <TableColumn fx:id="supplierNameColumn" onEditCommit="#changesupplierNameCellEvent" prefWidth="232.0" text="Supplier name" />
+                                 <TableColumn fx:id="phoneColumn" onEditCommit="#changephoneCellEvent" prefWidth="165.0" text="Phone No" />
+                                 <TableColumn prefWidth="361.0" text="Address">
+                                       <columns>
+                                          <TableColumn fx:id="additionalColumn" onEditCommit="#changeaddressCellEvent" prefWidth="102.0" text="Additional" />
+                                          <TableColumn fx:id="cityColumn" onEditCommit="#changecityCellEvent" prefWidth="102.0" text="City" />
+                                          <TableColumn fx:id="stateColumn" onEditCommit="#changestateCellEvent" prefWidth="82.0" text="State" />
+                                          <TableColumn fx:id="pincodeColumn" minWidth="7.0" onEditCommit="#changepincodeCellEvent" prefWidth="75.0" text="Pincode" />
+                                       </columns></TableColumn>
+                                    <TableColumn fx:id="deleteColumn" prefWidth="75.0" />
+                              </columns>
+                           </TableView>
+                           <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="759.0" spacing="10.0" />
+                           <HBox prefHeight="0.0" prefWidth="542.0" spacing="10.0">
+                              <children>
+                                 <JFXButton mnemonicParsing="false" onAction="#deleteItemButtonPushed" prefHeight="30.0" prefWidth="145.0" text="Delete Item(s) " />
+                                 <JFXButton fx:id="detailedPersonViewButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Detailed Person View" />
+                                 <JFXButton mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="30.0" prefWidth="113.0" text="Go Back to GUI Objects View" />
+                              </children>
+                           </HBox>
+                        </children>
+                     </VBox>
+                        <HBox layoutY="7.0" prefHeight="47.0" prefWidth="792.0">
+                           <children>
+                              <TextField fx:id="supplierSearch" prefHeight="26.0" prefWidth="131.0" promptText="Search">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#search" text="Search" />
+                              <JFXCheckBox fx:id="NamecBox" prefHeight="18.0" prefWidth="92.0" text="By Name">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="CitycBox" text="City">
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="PhonecBox" prefHeight="18.0" prefWidth="129.0" text="By Phone No.">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                           </children>
+                        </HBox>
+                  </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

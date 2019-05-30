@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="462.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.DashboardContents">
+   <children>
+      <VBox layoutX="21.0" layoutY="43.0" prefHeight="93.0" prefWidth="163.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="157.0" text="Deadstock Assets" textAlignment="RIGHT" textFill="#fff7f7">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlDeadstocklbl" prefHeight="32.0" prefWidth="125.0" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#getDeadstockpane" prefHeight="32.0" prefWidth="227.0" text="  View all" textFill="#fffafa">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="240.0" layoutY="43.0" prefHeight="93.0" prefWidth="162.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="Consumables" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlConsumablelbl" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="            " >
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#getConsumablepane" prefHeight="32.0" prefWidth="227.0" text="  View all" textFill="#fffafa">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="439.0" layoutY="43.0" prefHeight="93.0" prefWidth="178.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="33.0" prefWidth="183.0" style="-fx-background-color: #FF9800;" text="Assigned  Assets" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlAssignedlbl" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#getDistributionpane" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: #FF9800;" text="View all" textFill="#fffafa">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="21.0" layoutY="185.0" prefHeight="93.0" prefWidth="162.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="Vendors" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlVendorslbl" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#getVendorpane" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: #FF9800;" text="View all" textFill="#fffafa">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="240.0" layoutY="185.0" prefHeight="93.0" prefWidth="162.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="Employees" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlEmployeeslbl" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#getEmployeepane" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: #FF9800;" text="View all" textFill="#fffafa">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="447.0" layoutY="185.0" prefHeight="93.0" prefWidth="162.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="Locations" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlLocationslbl" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: #FF9800;" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#getLocations" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: #FF9800;" text="View all" textFill="#fffafa">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="21.0" layoutY="310.0" prefHeight="93.0" prefWidth="287.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="233.0" style="-fx-background-color: #FF9800;" text="Total consumable cost" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlConsumablecost" prefHeight="35.0" prefWidth="284.0" style="-fx-background-color: #FF9800;" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="321.0" layoutY="310.0" prefHeight="93.0" prefWidth="287.0" style="-fx-background-color: #FF9800;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #FF9800;" text="Total Deadstock cost" textAlignment="RIGHT" textFill="#fffafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TtlDeadstockcost" prefHeight="35.0" prefWidth="278.0" style="-fx-background-color: #FF9800;" text="            ">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="21.0" layoutY="4.0" prefHeight="26.0" prefWidth="154.0" text="DASHBOARD" />
+   </children>
+</AnchorPane>

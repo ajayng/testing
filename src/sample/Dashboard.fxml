@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="sidebar" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.Controller">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="820.0" prefWidth="223.0" styleClass="parent" stylesheets="@dashboard.css">
+         <children>
+            <HBox prefHeight="43.0" prefWidth="225.0" style="-fx-background-color: #005FFF;">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="163.0" text="        ADMIN PANEL" textFill="#f2efef">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="223.0" styleClass="buttons" stylesheets="@dashboard.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#showDashboard" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" text="Dashboard" textAlignment="JUSTIFY" textFill="#fcf8f8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="ie" layoutX="10.0" layoutY="53.0" prefHeight="46.0" prefWidth="223.0" styleClass="buttons" stylesheets="@dashboard.css">
+               <children>
+                  <MenuButton mnemonicParsing="false" prefHeight="108.0" prefWidth="223.0" style="-fx-background-color: #331B33; -fx-font-size: 16px;" styleClass="menu-item" text="              Items " textFill="#f5eeee">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#show_entry" text="           Add                       " />
+                      <MenuItem mnemonicParsing="false" onAction="#show_assetList" text="           List" />
+                        <MenuItem mnemonicParsing="false" onAction="#show_Distribution" text="     Assigned Items" />
+                    </items>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="97.0" prefHeight="44.0" prefWidth="223.0" styleClass="btn" stylesheets="@dashboard.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#show_Distribution" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" text="Distribution" textAlignment="JUSTIFY" textFill="#fcf8f8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="141.0" prefHeight="44.0" prefWidth="223.0" styleClass="btn" stylesheets="@dashboard.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#show_PO" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" text="Location" textAlignment="JUSTIFY" textFill="#fcf8f8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="165.0" prefHeight="44.0" prefWidth="223.0" styleClass="buttons" stylesheets="@dashboard.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#show_Supplier" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" text="Suppliers" textAlignment="JUSTIFY" textFill="#fcf8f8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="229.0" prefHeight="44.0" prefWidth="223.0" styleClass="btn" stylesheets="@dashboard.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#show_Employee" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" text="Employee" textAlignment="JUSTIFY" textFill="#fcf8f8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="275.0" prefHeight="44.0" prefWidth="223.0" styleClass="btn" stylesheets="@dashboard.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#show_Report" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" textAlignment="JUSTIFY" textFill="#fcf8f8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="Apane" layoutX="222.0" prefHeight="567.0" prefWidth="507.0" style="-fx-background-color: #ff455;">
+         <children>
+            <Button layoutX="42.0" layoutY="89.0" mnemonicParsing="false" onAction="#show_entry" prefHeight="45.0" prefWidth="223.0" styleClass="buttons" text="Items Entry" textAlignment="JUSTIFY" textFill="#fcf8f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
